@@ -47,7 +47,7 @@ const ProtectedRoute = ({ element }) => {
   const { isLoggedIn, isHydrated } = React.useContext(AuthContext);
 
   if (!isHydrated) {
-    return <div>Loading...</div>; // Ensure the app waits for hydration before rendering
+    return <div>Loading...</div>; 
   }
 
   return isLoggedIn ? element : <Navigate to="/login" />;
