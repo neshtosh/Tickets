@@ -1,0 +1,115 @@
+.ticket-summary-container {
+    padding: 20px;
+    text-align: center;
+    background: url();
+    padding: 50px 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 20px solid transparent;
+    border-radius: 50px;
+    border-image-source: url('/public/images/headerimg.png');
+    border-image-slice: 10;
+    border-image-outset: -1;
+    border-image-repeat: stretch;
+    border-image-width: 5px;
+    margin-top: 10px;
+  }
+  
+  .ticket-summary-top {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .event-thumbnail {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .ticket-summary-details {
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  .user-details-form {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-field {
+    margin: 10px 0;
+    text-align: left;
+  }
+  
+  .form-field label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-field input {
+    padding: 8px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .payment-options {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .payment-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .payment-option input {
+    margin-top: 5px;
+  }
+  
+  .summary-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .buy-again-button,
+  .confirm-purchase-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .buy-again-button {
+    background-color: #ff6600;
+    color: white;
+  }
+  
+  .confirm-purchase-button {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .buy-again-button:hover,
+  .confirm-purchase-button:hover {
+    opacity: 0.8;
+  }
+  
+  .confirm-purchase-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

@@ -1,0 +1,221 @@
+/* Event Details CSS */
+
+.event-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  color:#555;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.event-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  background-color:black;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow: hidden;
+}
+
+.event-details-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  max-height: 600px;
+}
+
+.event-details-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  max-width: 600px;
+}
+
+.event-details-info {
+  flex: 2;
+  padding: 0px;
+}
+
+.event-name {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ff5722;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.share-section {
+  margin-bottom: 20px;
+  margin-left: 310px;
+}
+
+.share-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  margin-right: 310px;
+}
+
+.social-icons a {
+  
+  gap:-10px;
+  align-items: center;
+  color: #555;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff5722;
+  transform: scale(1.2);
+}
+
+.ticket-selection {
+  margin-bottom: 20px;
+  background:#555;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.ticket-selection h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #4caf50;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+select,
+input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.add-button {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #45a049;
+}
+
+.ticket-summary {
+  margin-top: 20px;
+  animation: slideIn 0.4s ease-out;
+  border-top: 2px solid #ccc;
+  padding-top: 15px;
+}
+
+.ticket-summary h4 {
+  margin-bottom: 10px;
+  color: #ff9800;
+}
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+.summary-table th,
+.summary-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.summary-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #555;
+}
+
+.remove-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-button:hover {
+  background-color: #e53935;
+}
+
+.purchase-button {
+  display: inline-block;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.purchase-button:hover {
+  background-color: #1e88e5;
+}
+
+.event-description {
+  margin-top: 20px;
+  padding: 10px;
+  background:#555;
+  border-radius: 8px;
+}
+
+.event-description h3 {
+  font-size: 1.5rem;
+  color: #1976d2;
+  margin-bottom: 10px;
+}
+
+.event-description p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color:white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

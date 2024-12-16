@@ -1,0 +1,333 @@
+
+body, #root {
+  margin: 0;
+  height: 100%;
+}
+
+.App {
+  height: auto;
+  min-height: 100vh;
+  background-image: url('/public/images/background.jp');
+  background-size:contain; 
+  background-position: top center; 
+  background-repeat: no-repeat; 
+  background-attachment:scroll;
+  background-color: black;
+
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white; 
+  text-align: center;
+}
+
+.app {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Header styles */
+.header {
+  width: 96.7%;
+  position: sticky;
+  top: 0; /* Ensures the header stays visible at the top */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px; /* Adds more padding for better spacing */
+  background: linear-gradient(145deg, rgba(0, 0, 0, 0.6), rgba(30, 30, 30, 0.8)), 
+              url('/public/images/headerimage.png') center/cover no-repeat; /* Gradient + background */
+  backdrop-filter: blur(20px); /* Subtle blur for a sleek look */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Modern shadow */
+  z-index: 1000; /* Ensures the header stays above other elements */
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Dim background */
+  z-index: -1;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  cursor: pointer; /* Pointer cursor for interactivity */
+  transition: transform 0.3s ease;
+  margin-left: 20px;
+}
+
+.logo img:hover {
+  transform: scale(1.1); /* Subtle hover effect */
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligns text to the right */
+  gap: 4px;
+  margin-left: 69%;
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.contact-info a {
+  color: #ffd700; /* Golden color for links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #ff9900; /* Brighter hover effect */
+}
+
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Spacing between buttons */
+  margin-right: 20px;
+}
+
+.button {
+  padding: 8px 16px;
+  background: linear-gradient(145deg, #ffd700, #ffcc00); /* Modern gradient */
+  color: #121212;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: linear-gradient(145deg, #ffcc00, #ffb700); /* Subtle hover transition */
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.user-menu {
+  position: relative;
+}
+
+.user-menu-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #292929; /* Dark dropdown background */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.user-menu-dropdown a,
+.user-menu-dropdown button {
+  background: none;
+  border: none;
+  color: #ffd700; /* Golden text */
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.user-menu-dropdown a:hover,
+.user-menu-dropdown button:hover {
+  color: #ff9900; /* Bright hover effect */
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+    padding: 10px 20px;
+  }
+
+  .contact-info {
+    align-items: center;
+    text-align: center;
+  }
+
+  .auth-buttons {
+    justify-content: center;
+    width: 100%; /* Full width on small screens */
+  }
+
+  .button {
+    width: 100%; /* Full width buttons on small screens */
+  }
+}
+
+
+/* Main content */
+.main-content {
+  padding: 20px;
+  flex-direction: column;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 80%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #646cff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #535bf2;
+}
+
+/* Ticket list */
+.ticket-list {
+  display: grid;
+  
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  flex-direction: column;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  padding: 1rem;
+
+}
+
+/* Ticket styling */
+.ticket {
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ticket-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  padding: 10px;
+  color: rgb(57, 41, 41);
+}
+
+.ticket-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.ticket-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+
+
+
+
+
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #646cff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.auth-button:hover {
+  background-color: #535bf2;
+}
+
+
+.cta-button:hover {
+  background-color: #535bf2;
+  transform: translateY(-3px);
+}
+
+.about-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.icon {
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.1); 
+  padding: 1rem;
+  border-radius: 50%;
+  color: #f0db4f; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+    padding: 0.8rem;
+  }
+}
+
+

@@ -1,0 +1,50 @@
+.past-events-container{
+    position: relative;
+    flex-direction: column;
+    display: grid;
+    max-width: 90%;
+    background-image: url("/images/events-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 50px 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+
+    border : 20px solid transparent;
+    border-image-source: url('/public/images/headerimg.png');
+    border-image-slice: 10;
+    border-image-width: 10px; 
+    border-image-outset: -1; 
+    border-image-repeat: stretch;
+    border-image-width: 10px;;
+}
+.past-events-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@font-face {
+    font-family: 'Creattion Demo';
+    src: url('/fonts/Creattion Demo.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.past-events-title {
+    font-family: 'Creattion Demo', cursive; 
+    font-size: 5rem; 
+    color:white; 
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+}
+.past-event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:50px;
+    flex-direction: column;
+    max-width: 100%;
+    transition: transform 0.5s box-shadow 0.5s;
+}

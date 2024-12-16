@@ -1,0 +1,113 @@
+/* EventCard.css */
+
+.past-event-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1); /* Subtle glass effect */
+  }
+  
+  .past-event-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  }
+  
+  .past-event-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image is properly cropped */
+    border-radius: 8px;
+    margin: 10px 0;
+  }
+  
+  .past-event-info {
+    position: relative;
+    padding: 20px;
+    backdrop-filter: blur(15px); /* Glass effect */
+    background: rgba(0, 0, 0, 0.5); /* Dark translucent overlay */
+    color: #fff; /* White text for contrast */
+    border-radius: 15px;
+  }
+  
+  .past-event-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif; /* Modern font */
+    color: #ffd700; /* Gold color for headings */
+  }
+  
+  .past-event-info p {
+    font-size: 1rem;
+    margin: 5px 0;
+    font-family: "Roboto", sans-serif; /* Clean and readable font */
+    display: flex;
+    align-items: center; /* Align text with icons */
+  }
+  
+  .past-event-info p strong {
+    margin-right: 5px;
+  }
+  
+  .past-event-info .event-prices {
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Subtle background for grouping */
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Add a soft border */
+}
+
+.past-event-info .past-event-prices ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.past-event-info .past-event-prices ul li {
+    font-size: 1rem;
+    margin-bottom: 8px; /* Add spacing between items */
+    display: flex;
+    justify-content: space-between; /* Align labels and values */
+    font-family: "Roboto", sans-serif;
+}
+
+.past-event-info .past-event-prices ul li span {
+    font-weight: bold; /* Emphasize the price value */
+    color: #ffd700; /* Gold color for the price */
+}
+
+.past-event-info .past-event-prices ul li:last-child {
+    margin-bottom: 0; /* Remove margin for the last item */
+}
+
+  
+  .buy-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #646cff; /* Vibrant color for button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .buy-button:hover {
+    background: #e3474b;
+  }
+  
+  /* Icons for date, location, etc. */
+  .icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #ffd700;
+  }
+  

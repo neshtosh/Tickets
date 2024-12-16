@@ -1,0 +1,94 @@
+.event-card {
+  position: relative;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.event-date-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  padding: 5px;
+  width: 90px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.event-day {
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.event-date {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.event-month {
+  font-size: 0.8rem;
+  color: #ff6347;
+}
+
+.event-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-details {
+  padding: 15px;
+}
+
+.event-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.event-meta {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.event-meta p {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.icon {
+  margin-right: 8px;
+  color: #ffd700;
+}
+
+.event-button {
+  background-color: #646cff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.event-button:hover {
+  background-color: #ffd700;
+}
+
+.event-link {
+  text-decoration: none;
+}
